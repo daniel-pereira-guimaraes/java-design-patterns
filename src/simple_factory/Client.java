@@ -1,4 +1,4 @@
-package simple.factory;
+package simple_factory;
 
 public class Client {
 
