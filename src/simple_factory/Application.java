@@ -1,6 +1,6 @@
 package simple_factory;
 
-public class Client {
+public class Application {
 
 	public static void main(String[] args) {
 		
