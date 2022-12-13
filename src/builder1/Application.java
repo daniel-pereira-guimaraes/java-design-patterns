@@ -7,16 +7,16 @@ public class Application {
 				.andPrice(15.5)
 				.build();
 
-		Product p2 = new ProductBuilder("Keyboard")
+		Product p2 = new ProductBuilder("Mouse")
 				.andId(500L)
-				.andPrice(15.5)
+				.andPrice(5.0)
 				.build();
 
-		Product p3 = new ProductBuilder("Keyboard")
-				.andId(500L)
+		Product p3 = new ProductBuilder("TV")
+				.andId(30L)
 				.andBarCode("7891234567890")
 				.andPrice(15.5)
-				.andStock(50.0)
+				.andStock(250.0)
 				.build();
 		
 		System.out.println(p1);
