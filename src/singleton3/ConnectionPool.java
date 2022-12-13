@@ -10,12 +10,6 @@ public class ConnectionPool {
 	private static ConnectionPool instance = new ConnectionPool();
 	private static final ConnectionEntry[] pool = new ConnectionEntry[3];
 	
-	static {
-		for (int i = 0; i < pool.length; i++) {
-			pool[i] = new ConnectionEntry();
-		}
-	}
-	
 	private ConnectionPool() {
 		System.out.println("Creating connection pool...");
 	}
@@ -27,10 +21,12 @@ public class ConnectionPool {
 	
 	public Connection getConnection() {
 		System.out.println("Getting connection...");
-		for (ConnectionEntry ce : pool) {
-			if (!ce.inUse) {
-				ce.inUse = true;
-				return ce.connection;
+		for (int i = 0; i < pool.length; i++) {
+			if (pool[i] == null || !pool[i].inUse) {
+				if (pool[i] == null)
+					pool[i] = new ConnectionEntry();
+				pool[i].inUse = true;
+				return pool[i].connection;
 			}
 		}
 		throw new RuntimeException("Maximum number of connections exceeded!");
