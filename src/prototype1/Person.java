@@ -2,16 +2,14 @@ package prototype1;
 
 import java.util.Objects;
 
-public class Product implements Cloneable {
+public class Person implements Cloneable {
 	
 	private Long id;
 	private String name;
-	private Double price;
 
-	public Product(Long id, String name, Double price) {
+	public Person(Long id, String name) {
 		this.id = id;
 		this.name = name;
-		this.price = price;
 	}
 
 	public Long getId() {
@@ -30,22 +28,14 @@ public class Product implements Cloneable {
 		this.name = name;
 	}
 
-	public Double getPrice() {
-		return price;
-	}
-
-	public void setPrice(Double price) {
-		this.price = price;
-	}
-
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", price=" + String.format("%.2f", price) + "]";
+		return "Person [id=" + id + ", name=" + name + "]";
 	}
-
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, name, price);
+		return Objects.hash(id, name);
 	}
 
 	@Override
@@ -56,10 +46,10 @@ public class Product implements Cloneable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Product other = (Product) obj;
-		return Objects.equals(id, other.id) && Objects.equals(name, other.name) && Objects.equals(price, other.price);
+		Person other = (Person) obj;
+		return Objects.equals(id, other.id) && Objects.equals(name, other.name);
 	}
-	
+
 	@Override
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
