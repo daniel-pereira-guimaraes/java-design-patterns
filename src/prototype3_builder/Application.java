@@ -1,4 +1,4 @@
-package prototype3_with_builder;
+package prototype3_builder;
 
 public class Application {
 
