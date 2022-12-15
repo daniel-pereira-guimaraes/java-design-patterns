@@ -2,7 +2,7 @@ package prototype3_builder;
 
 import java.util.Objects;
 
-public class Address implements Cloneable {
+public class Address {
 	
 	private final String street;
 	private final int number;
@@ -42,11 +42,6 @@ public class Address implements Cloneable {
 			return false;
 		Address other = (Address) obj;
 		return number == other.number && Objects.equals(street, other.street);
-	}
-
-	@Override
-	public Object clone() throws CloneNotSupportedException {
-		return super.clone();
 	}
 
 }

@@ -13,7 +13,7 @@ public class Application {
 		
 		Person p3 = new Person.CloneBuilder(p1.getName())
 				.withId(p1.getId() + 1)
-				.withAddress(p1.getAddress())
+				.withAddress(new Address("Two", 222))
 				.build();
 
 		System.out.println("p1: " + p1);
