@@ -1,4 +1,4 @@
-package iterator_tv;
+package iterator2_tv;
 
 import java.util.Iterator;
 import java.util.Random;
@@ -28,6 +28,10 @@ public class Tv implements Iterable<Tv.Channel>{
 
 		public Channel(int number) {
 			this.number = number;
+		}
+		
+		public boolean getSignal() {
+			return signal;
 		}
 		
 		@Override

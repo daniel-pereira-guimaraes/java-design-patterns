@@ -1,6 +1,6 @@
-package iterator_tv;
+package iterator1_tv;
 
-import iterator_tv.Tv.Channel;
+import iterator1_tv.Tv.Channel;
 
 public class Application {
 
