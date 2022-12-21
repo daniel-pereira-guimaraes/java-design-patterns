@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Tv implements Iterable<Tv.Channel>{
 
-	private Channel[] channels = new Channel[30];
+	final private Channel[] channels = new Channel[30];
 	
 	public Tv() {
 		searchChannels();
@@ -23,8 +23,8 @@ public class Tv implements Iterable<Tv.Channel>{
 	
 	public class Channel {
 		
-		private int number;
-		private boolean signal = new Random().nextBoolean();
+		final private int number;
+		final private boolean signal = new Random().nextBoolean();
 
 		public Channel(int number) {
 			this.number = number;
